@@ -1,0 +1,24 @@
+<!-- templates/admin/report.html -->
+{% extends 'admin/base_site.html' %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+<table>
+    <thead>
+        <tr>
+            {% for key, value in data.0.items %}
+            <th>{{ key }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in data %}
+        <tr>
+            {% for key, value in item.items %}
+            <td>{{ value }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

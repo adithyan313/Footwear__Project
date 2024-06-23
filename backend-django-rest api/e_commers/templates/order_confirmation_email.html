@@ -1,0 +1,23 @@
+<!-- templates/order_confirmation_email.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Confirmation</title>
+</head>
+<body>
+    <h1>Order Confirmation</h1>
+    <p>Dear {{ order.user.username }},</p>
+    <p>Thank you for your order! Here are the details:</p>
+    <p><strong>Order ID:</strong> {{ order.id }}</p>
+    <p><strong>Order Date:</strong> {{ order.created_at }}</p>
+    <p><strong>Total Amount:</strong> ${{ order.total_amount }}</p>
+    <h3>Items:</h3>
+    <ul>
+        {% for item in order.items.all %}
+            <li>{{ item.quantity }} x {{ item.footwear.model }} - ${{ item.footwear.price }}</li>
+        {% endfor %}
+    </ul>
+    <p>The receipt is attached as a PDF.</p>
+    <p>Thank you for shopping with us!</p>
+</body>
+</html>

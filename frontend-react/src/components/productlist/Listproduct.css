@@ -1,0 +1,14 @@
+/* Adjusting card layout for responsiveness */
+@media (max-width: 992px) {
+    .col-lg-3 {
+        flex: 0 0 50%; /* Two items per row on medium devices */
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-lg-3 {
+        flex: 0 0 100%; /* One item per row on small devices */
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,14 @@
+<!-- templates/footwear_detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ footwear.brand.name }} {{ footwear.model }}</title>
+</head>
+<body>
+    <h1>{{ footwear.brand.name }} {{ footwear.model }}</h1>
+    <p>Size: {{ footwear.size }}</p>
+    <p>Price: {{ footwear.price }}</p>
+    <p>Stock: {{ footwear.stock }}</p>
+    <img src="{{ footwear.image.url }}" alt="{{ footwear.model }}">
+</body>
+</html>
